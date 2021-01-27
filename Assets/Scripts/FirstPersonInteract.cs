@@ -12,6 +12,8 @@ public class FirstPersonInteract : MonoBehaviour
 
     public float interactRange = 1f;
 
+    public bool isInGUI= false;
+
     private void Awake()
     {
         fpsMovement = GetComponent<FirstPersonMovement>();
@@ -20,19 +22,33 @@ public class FirstPersonInteract : MonoBehaviour
         camT        = fpsView.transform;
     }
 
+    private void Start()
+    {
+        if (isInGUI)
+            isInGUI = !isInGUI; // This is always false;
+    }
+
     private void Update()
     {
+        if(isInGUI)
+        {
+            if (fpsMovement.enabled || fpsView.enabled) // constrain movement if in GUI
+                fpsMovement.enabled = fpsView.enabled = false;
+        }
+        else
+            fpsMovement.enabled = fpsView.enabled = true;
+
         RaycastHit hit;
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isInGUI)
         {
             Debug.DrawRay(camT.position, camT.forward, Color.red);
 
             Ray camRay = new Ray(camT.position, camT.forward);
-            if (Physics.Raycast(camRay, out hit, interactRange))
+           if (Physics.Raycast(camRay, out hit, interactRange))
                 if (hit.collider.CompareTag("Interactable"))
                 {
                     Debug.Log("Found something interactable!");
-                    GetRootParent(hit.collider.transform).GetComponent<Interactable>().Interact();
+                    GetRootParent(hit.collider.transform);//.GetComponent<Interactable>().Interact();
                 }
         }
 
@@ -42,9 +58,16 @@ public class FirstPersonInteract : MonoBehaviour
 
     private Transform GetRootParent (Transform t)
     {
-        if (t.parent != null)
+        //Debug.Log(t.parent.parent.ToString());
+
+        if (t.parent.parent == null)
+            Debug.Log("There's a problem!");
+
+        return t;
+        //return t;
+        /*if (t.parent != null)
             return GetRootParent(t); // not at the root yet; go up!
         else
-            return t; // we're at the root, return!
+            return t; // we're at the root, return!*/
     }
 }
