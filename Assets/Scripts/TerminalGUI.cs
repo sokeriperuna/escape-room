@@ -11,6 +11,11 @@ public class TerminalGUI : MonoBehaviour
     public static event GUIEvent OnGUIOpen;
     public static event GUIEvent OnGUIClose;
 
+    private void Awake()
+    {
+
+    }
+
     public void OpenMainPanel()
     {
         this.gameObject.SetActive(true);
