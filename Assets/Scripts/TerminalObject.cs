@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Terminal : Interactable
+public class TerminalObject : Interactable
 {
+    public TerminalGUI gui;
+
     protected override void PerformFunction()
     {
-        Debug.Log("Terminal Placeholder\nThis will open the UI");
+        gui.OpenMainPanel();
     }
 }

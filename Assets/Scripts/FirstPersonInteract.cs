@@ -20,54 +20,74 @@ public class FirstPersonInteract : MonoBehaviour
         fpsView     = GetComponentInChildren<FirstPersonLook>();
 
         camT        = fpsView.transform;
+
+        TerminalGUI.OnGUIOpen  += OnGUIEnter;
+        TerminalGUI.OnGUIClose += OnGUIExit;
+        Debug.Log("Subscribed events.");
+    }
+
+    private void OnDestroy()
+    {
+        TerminalGUI.OnGUIOpen  -= OnGUIEnter;
+        TerminalGUI.OnGUIClose -= OnGUIExit;
+        Debug.Log("Unsubscribed events.");
     }
 
     private void Start()
     {
         if (isInGUI)
-            isInGUI = !isInGUI; // This is always false;
+            isInGUI = !isInGUI; // This is always false when starting the object;
     }
 
     private void Update()
     {
-        if(isInGUI)
-        {
-            if (fpsMovement.enabled || fpsView.enabled) // constrain movement if in GUI
-                fpsMovement.enabled = fpsView.enabled = false;
-        }
-        else
-            fpsMovement.enabled = fpsView.enabled = true;
+        Debug.DrawRay(camT.position, camT.forward, Color.red);
 
         RaycastHit hit;
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isInGUI)
         {
-            Debug.DrawRay(camT.position, camT.forward, Color.red);
+
 
             Ray camRay = new Ray(camT.position, camT.forward);
            if (Physics.Raycast(camRay, out hit, interactRange))
                 if (hit.collider.CompareTag("Interactable"))
                 {
                     Debug.Log("Found something interactable!");
-                    GetRootParent(hit.collider.transform);//.GetComponent<Interactable>().Interact();
+                    Transform t = GetRootParent(hit.collider.transform);
+
+                    if(t != null)
+                        t.GetComponent<Interactable>().Interact();
                 }
         }
-
-
-
     }
 
     private Transform GetRootParent (Transform t)
     {
         //Debug.Log(t.parent.parent.ToString());
 
-        if (t.parent.parent == null)
-            Debug.Log("There's a problem!");
-
-        return t;
-        //return t;
-        /*if (t.parent != null)
-            return GetRootParent(t); // not at the root yet; go up!
+        if (t == null)
+        {
+            Debug.LogError("Null transform passed.");
+            return null;
+        }
         else
-            return t; // we're at the root, return!*/
+        {
+            if (t.parent != null)
+                return GetRootParent(t.parent);
+            else
+                return t;
+        }
+    }
+
+    private void OnGUIEnter()
+    {
+        isInGUI = true;
+        fpsMovement.enabled = fpsView.enabled = false;
+    }
+
+    private void OnGUIExit()
+    {
+        isInGUI = false;
+        fpsMovement.enabled = fpsView.enabled = true;
     }
 }
