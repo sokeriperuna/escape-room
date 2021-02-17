@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class FirstPersonInteract : MonoBehaviour
 {
 
@@ -41,6 +43,10 @@ public class FirstPersonInteract : MonoBehaviour
 
     private void Update()
     {
+
+        if(Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(0);
+
         Debug.DrawRay(camT.position, camT.forward, Color.red);
 
         RaycastHit hit;

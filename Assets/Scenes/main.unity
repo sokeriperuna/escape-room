@@ -1186,40 +1186,85 @@ MonoBehaviour:
   dialogueEvents:
   - ID: 0
     type: 0
-    prompt: "What the heck did you just frickin\u2019 say about me, you little whiner?
-      I\u2019ll have you know I graduated top of my class in the Navy Seals, and
-      I\u2019ve been involved in numerous secret raids on Al-Quaeda, and I have over
-      300 confirmed kills."
+    prompt: Start
     choiceA:
-      content: Think again, buddy. As we speak I am contacting my secret network
-        of spies across the USA and your IP is being traced right now so you better
-        prepare for the storm, buddy.
+      content: A
       destinationID: A
     choiceB:
-      content: "I am trained in gorilla warfare and I\u2019m the top sniper in the
-        entire US armed forces. You are nothing to me but just another target. I
-        will wipe you the frick out with precision the likes of which has never been
-        seen before on this Earth, mark my frickin\u2019 words. You think you can
-        get away with saying that crap to me over the Internet?"
+      content: B
       destinationID: B
   - ID: A
     type: 0
-    prompt: Trollge
+    prompt: A
     choiceA:
-      content: is
+      content: A
       destinationID: AA
     choiceB:
-      content: coming.
+      content: B
       destinationID: AB
+  - ID: AA
+    type: 0
+    prompt: AA
+    choiceA:
+      content: A
+      destinationID: 0
+    choiceB:
+      content: B
+      destinationID: AAB
+  - ID: AB
+    type: 0
+    prompt: AB
+    choiceA:
+      content: A
+      destinationID: ABA
+    choiceB:
+      content: B
+      destinationID: ABB
+  - ID: BB
+    type: 0
+    prompt: BB
+    choiceA:
+      content: A
+      destinationID: BBA
+    choiceB:
+      content: B
+      destinationID: BBB
+  - ID: BA
+    type: 0
+    prompt: BA
+    choiceA:
+      content: A
+      destinationID: BAA
+    choiceB:
+      content: B
+      destinationID: BAB
   - ID: B
     type: 0
-    prompt: '?'
+    prompt: B
     choiceA:
-      content: Yes
+      content: A
       destinationID: BA
     choiceB:
-      content: No
+      content: B
       destinationID: BB
+  - ID: 
+    type: 0
+    prompt: 
+    choiceA:
+      content: 
+      destinationID: 
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: 
+    type: 0
+    prompt: 
+    choiceA:
+      content: 
+      destinationID: 
+    choiceB:
+      content: 
+      destinationID: 
 --- !u!1001 &525187811
 PrefabInstance:
   m_ObjectHideFlags: 0
