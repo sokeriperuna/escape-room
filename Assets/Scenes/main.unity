@@ -997,7 +997,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &399866182
@@ -1084,6 +1084,7 @@ GameObject:
   - component: {fileID: 405640159}
   - component: {fileID: 405640158}
   - component: {fileID: 405640160}
+  - component: {fileID: 405640161}
   m_Layer: 5
   m_Name: Main Panel
   m_TagString: Untagged
@@ -1165,6 +1166,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f352c0fe5050a4542ad1ef515835daa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  content: {fileID: 2060075140}
+  leftChoice: {fileID: 1909026106}
+  rightChoice: {fileID: 399866181}
+  dialogueHandler: {fileID: 405640161}
+--- !u!114 &405640161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405640156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8778f134e6ceb6349b87b79129f77c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terminalGUI: {fileID: 405640160}
+  dialogueEvents:
+  - ID: 0
+    type: 0
+    prompt: "What the heck did you just frickin\u2019 say about me, you little whiner?
+      I\u2019ll have you know I graduated top of my class in the Navy Seals, and
+      I\u2019ve been involved in numerous secret raids on Al-Quaeda, and I have over
+      300 confirmed kills."
+    choiceA:
+      content: Think again, buddy. As we speak I am contacting my secret network
+        of spies across the USA and your IP is being traced right now so you better
+        prepare for the storm, buddy.
+      destinationID: A
+    choiceB:
+      content: "I am trained in gorilla warfare and I\u2019m the top sniper in the
+        entire US armed forces. You are nothing to me but just another target. I
+        will wipe you the frick out with precision the likes of which has never been
+        seen before on this Earth, mark my frickin\u2019 words. You think you can
+        get away with saying that crap to me over the Internet?"
+      destinationID: B
+  - ID: A
+    type: 0
+    prompt: Trollge
+    choiceA:
+      content: is
+      destinationID: AA
+    choiceB:
+      content: coming.
+      destinationID: AB
+  - ID: B
+    type: 0
+    prompt: '?'
+    choiceA:
+      content: Yes
+      destinationID: BA
+    choiceB:
+      content: No
+      destinationID: BB
 --- !u!1001 &525187811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2094,7 +2149,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 963765615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 405640160}
+        m_TargetAssemblyTypeName: TerminalGUI, Assembly-CSharp
+        m_MethodName: OnDialogueChoice
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &963765615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,7 +2606,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1163880811}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 405640160}
+        m_TargetAssemblyTypeName: TerminalGUI, Assembly-CSharp
+        m_MethodName: OnDialogueChoice
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1163880811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,7 +3322,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3307,7 +3386,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1909026107
@@ -3605,7 +3684,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: placeholder placeholder placeholder
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3669,7 +3748,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2060075141
