@@ -1202,15 +1202,6 @@ MonoBehaviour:
     choiceB:
       content: B
       destinationID: AB
-  - ID: AA
-    type: 0
-    prompt: AA
-    choiceA:
-      content: A
-      destinationID: 0
-    choiceB:
-      content: B
-      destinationID: AAB
   - ID: AB
     type: 0
     prompt: AB
@@ -1247,24 +1238,33 @@ MonoBehaviour:
     choiceB:
       content: B
       destinationID: BB
-  - ID: 
+  - ID: B
     type: 0
-    prompt: 
+    prompt: B
     choiceA:
-      content: 
-      destinationID: 
+      content: A
+      destinationID: BA
     choiceB:
-      content: 
-      destinationID: 
-  - ID: 
+      content: B
+      destinationID: BB
+  - ID: B
     type: 0
-    prompt: 
+    prompt: B
     choiceA:
-      content: 
-      destinationID: 
+      content: A
+      destinationID: BA
     choiceB:
-      content: 
-      destinationID: 
+      content: B
+      destinationID: BB
+  - ID: B
+    type: 0
+    prompt: B
+    choiceA:
+      content: A
+      destinationID: BA
+    choiceB:
+      content: B
+      destinationID: BB
 --- !u!1001 &525187811
 PrefabInstance:
   m_ObjectHideFlags: 0
