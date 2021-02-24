@@ -1186,21 +1186,24 @@ MonoBehaviour:
   dialogueEvents:
   - ID: 0
     type: 0
-    prompt: Welcome!!!
+    prompt: Welcome to Millipede Messenger!
     choiceA:
-      content: Yes, this works
+      content: '1 new message from: Senyo the Cleaner'
       destinationID: A
     choiceB:
-      content: im hungry
+      content: '1 new message from: Sergeant Boroon'
       destinationID: B
   - ID: A
     type: 0
-    prompt: It sure does...
+    prompt: Dear professor Julida. I want to tell you my deepest apologies about
+      the potion that I dropped last week from your desk. I promise to be more careful
+      next time.  I hope you are safe.
     choiceA:
-      content: A
+      content: Don't worry, everyone makes mistakes. I'll be fine.
       destinationID: AA
     choiceB:
-      content: B
+      content: Don't you ever let this happen again. I, the genious professor Julida,
+        prepared that potion a long time.
       destinationID: AB
   - ID: AB
     type: 0
@@ -1211,33 +1214,28 @@ MonoBehaviour:
     choiceB:
       content: B
       destinationID: ABB
-  - ID: BB
+  - ID: AA
     type: 0
-    prompt: BB
+    prompt: Thank you so much! Sergeant Boroon heard about the accident and cut my
+      salary in half... I hope it is enough for feeding my child at least.
     choiceA:
-      content: A
-      destinationID: BBA
+      content: I'm very sad to hear that. Is your kid going to be alright?
+      destinationID: AAA
     choiceB:
-      content: B
-      destinationID: BBB
-  - ID: BA
+      content: I'm not surprised. Everyone seems so cruel in this country...
+      destinationID: AAB
+  - ID: AAA
     type: 0
-    prompt: BA
+    prompt: Oh, sure! I managed to cook a large cabbage soup for them yesterday.
+      Thank you for asking, professor. You seem more empathic person as I assumed,
+      do you have a family?
     choiceA:
-      content: A
-      destinationID: BAA
+      content: Yes, I do have a family.. far far away. Although it's just my mum
+        and my cat. But they sure are important to me.
+      destinationID: AAAA
     choiceB:
-      content: B
-      destinationID: BAB
-  - ID: B
-    type: 0
-    prompt: me too yeaaa
-    choiceA:
-      content: A
-      destinationID: BA
-    choiceB:
-      content: B
-      destinationID: BB
+      content: 
+      destinationID: AAAB
 --- !u!1001 &525187811
 PrefabInstance:
   m_ObjectHideFlags: 0
