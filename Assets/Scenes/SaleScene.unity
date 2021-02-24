@@ -1207,12 +1207,14 @@ MonoBehaviour:
       destinationID: AB
   - ID: AB
     type: 0
-    prompt: AB
+    prompt: I know you are, I'm just a cleaner trying to do their best.
     choiceA:
-      content: A
-      destinationID: ABA
+      content: Well, I guess we can't do anything about it anymore. I'll be fine.
+      destinationID: AA
     choiceB:
-      content: B
+      content: 'Here''s what we are going to do now: you should come here and open
+        the do... I mean, clean the place for me. Otherwise I''m going to complain
+        about you to the leaders.'
       destinationID: ABB
   - ID: AA
     type: 0
@@ -1235,7 +1237,380 @@ MonoBehaviour:
       destinationID: AAAA
     choiceB:
       content: 
-      destinationID: AAAB
+      destinationID: 
+  - ID: AAAA
+    type: 0
+    prompt: Wonderful to hear that you have so good relationship with your mother.
+      Good relationships sure are helpful in these kind of times. I hope the war
+      ends soon..
+    choiceA:
+      content: .
+      destinationID: ALERT1
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: ABB
+    type: 2
+    prompt: You do realise who you are talking to? I happen to be one of the closest
+      friends with their majesty of Spirobolius, the leader of the high ministry.
+      They would never fire me. Who is having this conversation with me? I'll send
+      guards to check the professors room. Good bye.
+    choiceA:
+      content: .
+      destinationID: LOST
+    choiceB:
+      content: .
+      destinationID: LOST
+  - ID: AAB
+    type: 0
+    prompt: Intresting. In my opinion cruelty has no borders. I think it reaches
+      every human society.
+    choiceA:
+      content: You are probably right. In the end all of us have the same potential
+        to act cruel or empathic.
+      destinationID: AABA
+    choiceB:
+      content: Come on. I know how the people in this country's government deals
+        with their civillians. People are forced to fight in a war they cannot win.
+        The rulers are enslaving the people.
+      destinationID: AABB
+  - ID: AABA
+    type: 0
+    prompt: I knew you were a humanist too, professor. It's a pleasure to talk with
+      you.
+    choiceA:
+      content: ','
+      destinationID: ALERT1
+    choiceB:
+      content: ','
+      destinationID: ALERT1
+  - ID: AABB
+    type: 2
+    prompt: Dear professor Julida. I am verry sorry but I have to report your unpatriotic
+      behaviour. Perhaps you didn't know, but I am a very close friend with their
+      majesty Spirobolius, the leader of the high ministry. I know they are doing
+      their best to protect our country. The majesty's guard is coming to capture
+      you.
+    choiceA:
+      content: ','
+      destinationID: LOST
+    choiceB:
+      content: ','
+      destinationID: LOST
+  - ID: ALERT1
+    type: 3
+    prompt: 'ALERT: Attention all the people inside the fortress. We have lost enemy
+      in our site. The high ministry has decided to prepare an attack. All civilians
+      need to stay in the cellar, don''t panic. Now is our chance!'
+    choiceA:
+      content: 'You have 1 new message from: Senyo the Cleaner'
+      destinationID: C
+    choiceB:
+      content: ','
+      destinationID: C
+  - ID: C
+    type: 0
+    prompt: Did you see that professor? There are no enemies in the sight any more!
+      I hope the war is starting to settle.
+    choiceA:
+      content: To be honest I think it's suspicious. An eye of the storm. I feel
+        scared.
+      destinationID: CA
+    choiceB:
+      content: I guess so... on the other hand anything can really happen nowadays.
+      destinationID: CB
+  - ID: CA
+    type: 0
+    prompt: Perhaps it might be suspicios... I wonder what is happening?
+    choiceA:
+      content: Dear Senyo, I have to confess that I know what is happening. The republic
+        of Anthus is going to release a new mass destruction weapon. It's an airship
+        that will contain destructive materials. If the soldiers of Urb Milli are
+        going to shoot the airship in their air space, it will destroy the whole
+        city.
+      destinationID: CAA
+    choiceB:
+      content: Anything can happen. We shouldn't be so carefree!
+      destinationID: CAB
+  - ID: CAA
+    type: 0
+    prompt: Dear god. How can this be possible? You know I'm one of the best friends
+      of their majesty Spirobolius, the leader of the high ministry? I have conversations
+      with them every day and they have never heard about anything like this. How
+      can you know, professor?
+    choiceA:
+      content: I have to confess. I'm not the professor Julida, I'm their prisoner
+        from Anthus. If you really are close friends with their majesty, I'm sure
+        you can make them believe what I just told you. The people of Urb Milli need
+        to know the truth. It's alright if you throw me to prison after you know
+        my identity.
+      destinationID: CAAA
+    choiceB:
+      content: I just have this odd feeling. Something very bad is going to happen.
+        I think everyone should just leave this fortress and escape. Run as far away
+        as we can.
+      destinationID: CAB
+  - ID: CAAA
+    type: 0
+    prompt: You are the prisoner after all? I have to admit you sounded like a totally
+      different person than Julida. You seem humane and reliable. I'll tell about
+      this to their majesty Spirobolius, right away. I'm sure they will be merciful
+      for you since you saved our city.
+    choiceA:
+      content: .
+      destinationID: WIN1
+    choiceB:
+      content: .
+      destinationID: WIN1
+  - ID: WIN1
+    type: 1
+    prompt: Senyo the cleaner send message to Spirobolius. Their majesty took serious
+      actions against the planned attack of Anthus. They informed the gorvenment
+      of Anthus about their knowledge and prepared to evacuate the Urb Milli city.
+      The republic of Anthus responded by withdrawing their inhumane plans. This
+      was the first step towards peace.
+    choiceA:
+      content: .
+      destinationID: WIN
+    choiceB:
+      content: .
+      destinationID: WIN
+  - ID: CB
+    type: 0
+    prompt: Come on, don't be so pessimistic. I'm sure I'll get to see my child soon
+      and you'll be able to return your family as well.
+    choiceA:
+      content: Dear Senyo, I have to confess that I know what is happening. The republic
+        of Anthus is going to release a new mass destruction weapon. It's an airship
+        that will contain destructive materials. If the soldiers of Urb Milli are
+        going to shoot the airship in their air space, it will destroy the whole
+        city.
+      destinationID: CAA
+    choiceB:
+      content: Anything can happen. We shouldn't be so carefree!
+      destinationID: CAB
+  - ID: CAB
+    type: 0
+    prompt: Dear professor, I understand that the war time is making you stress.
+      Take it easy, there are no enemies in the sight anymore.
+    choiceA:
+      content: ','
+      destinationID: ALERT2
+    choiceB:
+      content: ','
+      destinationID: ALERT2
+  - ID: ALERT2
+    type: 3
+    prompt: 'ALERT: Attention, all the people in the fortress! Our troops have located
+      one Anthus airship in our air space. Since there is only one, it seems they
+      are lacking of capacity. We are sure we can hande the threat. After the takedown
+      all the civillians are allowed to leave the cellar. The war seems to have come
+      to an end! The people of Urb Milli, we have won!'
+    choiceA:
+      content: This can't be happening... we are doomed.
+      destinationID: LOST2
+    choiceB:
+      content: ','
+      destinationID: LOST2
+  - ID: LOST2
+    type: 2
+    prompt: Urb Milli troops shoot the Anthus airship that flew on the top of their
+      fortress. The destructive materials inside the airship exploded and destroyed
+      the whole city.
+    choiceA:
+      content: 
+      destinationID: 
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: B
+    type: 0
+    prompt: Professor Julida!! Did you finally manage to get that truth serum working
+      with the prisoner? As the 2nd commander in charge of the troops of North-West
+      side of the fortress, I have the full right to demand this!! And don't tell
+      me you went to the cellar to hide with the other losers. Even worse, if I catch
+      you again in the kitchen eating the cakes of our leaders, you can be sure I'll
+      get you FIRED!!!
+    choiceA:
+      content: Whoa easy there, pal. I'm not the professor. I'm apparently their
+        prisoner and they left me unguarded. The professor indeed left to kitchen
+        to eat the cakes.  Is someone going to substitute them torturing me or what?
+      destinationID: BA
+    choiceB:
+      content: Yes... indeed dear sergeant! The tests are finally ready...
+      destinationID: BB
+  - ID: BA
+    type: 2
+    prompt: 'Soo... you are revealing yourself? ARE YOU NUTS?! Anyway, I''ll get
+      the sugar addicted professor to give you new anesthesia. Sleep well, "pal"! '
+    choiceA:
+      content: ...
+      destinationID: LOST3
+    choiceB:
+      content: ...
+      destinationID: LOST3
+  - ID: BB
+    type: 0
+    prompt: Excellet work, professor! So, the prisoner told you how they managed
+      to already escape once? I'm all ears!
+    choiceA:
+      content: Yea, sure... But the knowledge is classified. I should't talk with
+        you about this.
+      destinationID: BBA
+    choiceB:
+      content: Well, the potion didn't work. The prisoners willpower seems to be
+        like a rock. Seems like a cool soldier..
+      destinationID: BBB
+  - ID: BBA
+    type: 0
+    prompt: 'I understand, I am a 2nd commander after all. You you want to tell their
+      high Majesty Spirobolius first? Listen, they probably dont have time for these
+      kind of boring things. I''ll pay you if I can get the knowledge first. '
+    choiceA:
+      content: No. I'm going to pass this offer, thank you. Good luck for you...
+        with the war and stuff!
+      destinationID: BBAA
+    choiceB:
+      content: Sure, I'll tell you.. In a moment..!
+      destinationID: ALERT3
+  - ID: ALERT3
+    type: 3
+    prompt: 'ALERT: Attention all the people inside the fortress. We have lost enemy
+      in our site. The high ministry has decided to prepare an attack. All civilians
+      need to stay in the cellar, don''t panic. Now is our chance!'
+    choiceA:
+      content: 'You''ve got 1 new message from: Sergeant Boroon'
+      destinationID: D
+    choiceB:
+      content: .
+      destinationID: D
+  - ID: LOST3
+    type: 2
+    prompt: The boroons troops get to the room and make you drink sleeping potion.
+      game over
+    choiceA:
+      content: 
+      destinationID: 
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: BBAA
+    type: 0
+    prompt: How dare you mock me? This knowledge could have been my chance to get
+      honor in the minstry... The rulers always look down on me...  You do realise
+      I have the toughest soldiers in my command? If you are not going to sell me
+      your knowledge, I'm going to threaten it out of you.
+    choiceA:
+      content: .
+      destinationID: LOST4
+    choiceB:
+      content: .
+      destinationID: LOST4
+  - ID: LOST4
+    type: 2
+    prompt: Sergeant Boroons troops enter the room and realise you are the prisoner.
+      Game over
+    choiceA:
+      content: 
+      destinationID: 
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: BBB
+    type: 0
+    prompt: This is the LAST STRAW!! You are just wasting our resources here in the
+      fortress, and even worse, eat our cakes.  As the 2nd commander in charge of
+      the Nort-West side, I fire you. No, I could just imprison you, just because
+      I CAN! AHAH!
+    choiceA:
+      content: .
+      destinationID: LOST4
+    choiceB:
+      content: .
+      destinationID: LOST4
+  - ID: D
+    type: 0
+    prompt: Heck with these all these boring alerts. The war is too much hassle in
+      my opinion. So, what about the knowledge? What the prisoner told you? I'm sure
+      I'll become appriciated when I'm going to spread the news...!
+    choiceA:
+      content: First I'd like to discuss about my payment.
+      destinationID: DA
+    choiceB:
+      content: The prisoner confessed me about a huge catastrophe they tried to escape.
+        If we don't do anything, our city is going to explode. Everyone must know
+        this.
+      destinationID: DB
+  - ID: DA
+    type: 0
+    prompt: Ah I see. I'm a business person like you. But you have to understand
+      that I can call my troops and imprison you at any point, I'm a sargeant after
+      all. So, what do you know about the prisoner?
+    choiceA:
+      content: The prisoner confessed me about a huge catastrophe they tried to escape.
+        If we don't do anything, our city is going to explode. Everyone must know
+        this.
+      destinationID: DB
+    choiceB:
+      content: 
+      destinationID: DB
+  - ID: DB
+    type: 0
+    prompt: Excellent! This sounds like a unique situation where I can get the spotlight
+      and save the city! Tell me the details, what to do. I'll be rich!!!!
+    choiceA:
+      content: Sure. I'll trust you. The republic of Anthus is going to release an
+        airship which contains explosive materials. You and your troops should sail
+        to sea and destroy it there before it reaches the land.
+      destinationID: DBA
+    choiceB:
+      content: How dare you celebrate this? This is serious, lots of lifes are depending
+        on this knowledge. You have to inform the high ministry as soon as possible!
+      destinationID: DBB
+  - ID: DBA
+    type: 0
+    prompt: Don't worry, I'll manage this! So my dear friend, what would you like
+      to have as an payment? I'll get you anything.
+    choiceA:
+      content: Very well. I'd like to retire now. Prepare me a horse and send the
+        stable boy in my room. I'll leave this fortress for good. Farewell!
+      destinationID: DBAA
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: DBAA
+    type: 0
+    prompt: Very well. I'd like to retire now. Prepare me a horse and send the stable
+      boy in my room. I'll leave this fortress for good. Farewell!
+    choiceA:
+      content: ...
+      destinationID: WIN2
+    choiceB:
+      content: ...
+      destinationID: WIN2
+  - ID: WIN2
+    type: 1
+    prompt: You knocked the stable boy down and disguised as them. Then you took
+      the horse and ride far far away, you win!
+    choiceA:
+      content: 
+      destinationID: 
+    choiceB:
+      content: 
+      destinationID: 
+  - ID: DBB
+    type: 0
+    prompt: You are not going to take the fun out of this from me! I'm not going
+      to tell about this to the high ministry. I'm going to be the hero myself and
+      save the city. I don't know how but I'll figure something out. I'll send some
+      tough guards to your room to make sure you are not going to tell anyone. Sorry
+      professor but it is what it is, I just need this career opportunity!
+    choiceA:
+      content: ...
+      destinationID: LOST4
+    choiceB:
+      content: ...
+      destinationID: LOST4
 --- !u!1001 &525187811
 PrefabInstance:
   m_ObjectHideFlags: 0
