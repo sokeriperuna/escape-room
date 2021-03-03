@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Millipede Messenger
+  m_text: prof.julida@millipede.intra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
   m_sharedMaterial: {fileID: -8144528208429664501, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
