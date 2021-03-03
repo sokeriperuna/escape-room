@@ -997,7 +997,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1244,11 +1244,11 @@ MonoBehaviour:
       Good relationships sure are helpful in these kind of times. I hope the war
       ends soon..
     choiceA:
-      content: .
+      content: (Press this)
       destinationID: ALERT1
     choiceB:
-      content: 
-      destinationID: 
+      content: (Press this)
+      destinationID: ALERT1
   - ID: ABB
     type: 2
     prompt: You do realise who you are talking to? I happen to be one of the closest
@@ -1256,11 +1256,11 @@ MonoBehaviour:
       They would never fire me. Who is having this conversation with me? I'll send
       guards to check the professors room. Good bye.
     choiceA:
-      content: .
-      destinationID: LOST
+      content: (PRESS THIS)
+      destinationID: LOST4
     choiceB:
-      content: .
-      destinationID: LOST
+      content: (PRESS THIS)
+      destinationID: LOST4
   - ID: AAB
     type: 0
     prompt: Intresting. In my opinion cruelty has no borders. I think it reaches
@@ -1279,10 +1279,10 @@ MonoBehaviour:
     prompt: I knew you were a humanist too, professor. It's a pleasure to talk with
       you.
     choiceA:
-      content: ','
+      content: (PRESS THIS)
       destinationID: ALERT1
     choiceB:
-      content: ','
+      content: (PRESS THIS)
       destinationID: ALERT1
   - ID: AABB
     type: 2
@@ -1292,11 +1292,11 @@ MonoBehaviour:
       their best to protect our country. The majesty's guard is coming to capture
       you.
     choiceA:
-      content: ','
-      destinationID: LOST
+      content: (PRESS THIS)
+      destinationID: LOST4
     choiceB:
-      content: ','
-      destinationID: LOST
+      content: (PRESS THIS)
+      destinationID: LOST4
   - ID: ALERT1
     type: 3
     prompt: 'ALERT: Attention all the people inside the fortress. We have lost enemy
@@ -1357,10 +1357,10 @@ MonoBehaviour:
       this to their majesty Spirobolius, right away. I'm sure they will be merciful
       for you since you saved our city.
     choiceA:
-      content: .
+      content: (PRESS THIS)
       destinationID: WIN1
     choiceB:
-      content: .
+      content: (PRESS THIS)
       destinationID: WIN1
   - ID: WIN1
     type: 1
@@ -1394,10 +1394,10 @@ MonoBehaviour:
     prompt: Dear professor, I understand that the war time is making you stress.
       Take it easy, there are no enemies in the sight anymore.
     choiceA:
-      content: ','
+      content: (PRESS THIS)
       destinationID: ALERT2
     choiceB:
-      content: ','
+      content: (PRESS THIS)
       destinationID: ALERT2
   - ID: ALERT2
     type: 3
@@ -1444,10 +1444,10 @@ MonoBehaviour:
     prompt: 'Soo... you are revealing yourself? ARE YOU NUTS?! Anyway, I''ll get
       the sugar addicted professor to give you new anesthesia. Sleep well, "pal"! '
     choiceA:
-      content: ...
+      content: (PRESS THIS)
       destinationID: LOST3
     choiceB:
-      content: ...
+      content: (PRESSTHIS)
       destinationID: LOST3
   - ID: BB
     type: 0
@@ -1501,10 +1501,10 @@ MonoBehaviour:
       I have the toughest soldiers in my command? If you are not going to sell me
       your knowledge, I'm going to threaten it out of you.
     choiceA:
-      content: .
+      content: (PRESS THIS)
       destinationID: LOST4
     choiceB:
-      content: .
+      content: (PRESS THIS)
       destinationID: LOST4
   - ID: LOST4
     type: 2
@@ -1523,10 +1523,10 @@ MonoBehaviour:
       the Nort-West side, I fire you. No, I could just imprison you, just because
       I CAN! AHAH!
     choiceA:
-      content: .
+      content: (PRESS THIS)
       destinationID: LOST4
     choiceB:
-      content: .
+      content: (PRESS THIS)
       destinationID: LOST4
   - ID: D
     type: 0
@@ -1606,10 +1606,10 @@ MonoBehaviour:
       tough guards to your room to make sure you are not going to tell anyone. Sorry
       professor but it is what it is, I just need this career opportunity!
     choiceA:
-      content: ...
+      content: (PRESS THIS)
       destinationID: LOST4
     choiceB:
-      content: ...
+      content: (PRESS THIS)
       destinationID: LOST4
 --- !u!1001 &525187811
 PrefabInstance:
@@ -1858,7 +1858,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: John Smith
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -8144528208429664501, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3713,7 +3713,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4075,7 +4075,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: placeholder placeholder placeholder
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5746177e443e86b44af9a1acb77fe280, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
