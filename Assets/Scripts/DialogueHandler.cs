@@ -7,6 +7,7 @@ public class DialogueHandler : MonoBehaviour
 {
 
     public TerminalGUI terminalGUI;
+    public AudioHandler audioHandler;
 
     [SerializeField]
     public DialogueEvent[] dialogueEvents; // All of our essential dialogue info is found in here!
@@ -21,14 +22,23 @@ public class DialogueHandler : MonoBehaviour
     void DisplayNewDialogue(string newID)
     {
         foreach (DialogueEvent e in dialogueEvents)
-            if(e.ID == newID)
+        {
+            if (e.ID == newID)
             {
                 currentDialogueEvent = e;
                 break;
             }
+        }
+
+        if (currentDialogueEvent.type == DIALOGUE_TYPE.WIN)
+            audioHandler.PlaySound("win");
+        else if (currentDialogueEvent.type == DIALOGUE_TYPE.LOSE)
+            audioHandler.PlaySound("lose");
+
 
         terminalGUI.DisplayDialogueEvent(currentDialogueEvent);
     }
+
 
     public void Choice(char id)
     {
